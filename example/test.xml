@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+  <customer id="1">
+    <name>blah</name>
+    <transaction>19.95</transaction>
+  </customer>
+  <customer id="2">
+    <name>meh</name>
+    <transaction>6.50</transaction>
+  </customer>
+  <customer id="4">
+    <name>yep</name>
+    <transaction>61.08</transaction>
+  </customer>
+</customers>
