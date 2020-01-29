@@ -3,7 +3,8 @@ A commad-line stream converter for XML to JSON
 ... because working with XML sucks
 
 Run Tests and Build
-``` make
+``` 
+make
 ```
 
 ```cat example/test | ./x2j | jq '.'
