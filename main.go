@@ -4,25 +4,28 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
 	"os"
 
 	xj "github.com/basgys/goxml2json"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
+func convStream(d io.Reader) (*bytes.Buffer, error) {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Error converting document.")
+		}
+	}()
+	j, err := xj.Convert(d, xj.WithAttrPrefix(""))
 
-func convStream(d io.Reader) *bytes.Buffer {
-	j, err := xj.Convert(d)
-	check(err)
+	return j, err
 
-	return j
 }
 
 func main() {
-	j := convStream(os.Stdin)
+	j, err := convStream(os.Stdin)
+	if err != nil {
+		log.Fatalln(err)
+	}
 	fmt.Println(j)
 }
