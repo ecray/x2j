@@ -2,14 +2,30 @@
 <customers>
   <customer id="1">
     <name>blah</name>
+      <order id="666eefff">
+        <product id="34223">
+          <name>vin</name>
+        </product>
+      </order>
     <transaction>19.95</transaction>
   </customer>
   <customer id="2">
     <name>meh</name>
+      <order id="edf7f1ad">
+        <product id="2222">
+          <name>øl</name>
+        </product>
+      </order>
     <transaction>6.50</transaction>
   </customer>
   <customer id="4">
     <name>yep</name>
+      <order id="dd27f6f8">
+        <product id="11111">
+          <name>log</name>
+        </product>
+      </order>
     <transaction>61.08</transaction>
   </customer>
 </customers>
+
