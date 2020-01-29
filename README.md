@@ -4,10 +4,11 @@ A commad-line stream converter for XML to JSON
 
 Run Tests and Build
 ``` 
-make
+$ make
 ```
 
-```cat example/test | ./x2j | jq '.'
+```
+$ cat example/test | ./x2j | jq '.'
 {
   "customers": {
     "customer": [
